@@ -18,6 +18,7 @@
     <a href="homes.html">Homes</a>
     <a href="donate.html">Donate</a>
     <a href="contact.html">Contact</a>
+    <a href="index.html">Sign Out</a>
 </nav>
 
 <section>
@@ -31,6 +32,14 @@
      alt="Children at Hope for Children Foundation"
      width="300">
 </section>
+   <h2 id="welcome"></h2>
+
+<script>
+
+document.getElementById("welcome").innerHTML =
+"Welcome " + localStorage.getItem("fullname");
+
+</script> 
 
 <footer>
     <p>© 2026 Hope For Children Foundation</p>
