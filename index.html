@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
     <title>Hope for Children Foundation | Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,17 +12,17 @@
 <h1>Hope for Children Foundation</h1>
 <h2>Login</h2>
 
-  <form action="home.html">
+<form onsubmit="login(); return false;">
 
 <label><b>Username</b></label><br>
-<input type="text" name="username" required><br><br>
+<input type="text" id="user" required><br><br>
 
 <label><b>Password</b></label><br>
-<input type="password" name="password" required><br><br>
+<input type="password" id="pass" required><br><br>
 
 <input type="submit" value="Login">
 
-</>
+</form>
 
 <p>
 Don't have an account?
@@ -30,6 +30,27 @@ Don't have an account?
 </p>
 
 </center>
+
+<script>
+
+function login(){
+
+if(user.value==localStorage.getItem("username") &&
+pass.value==localStorage.getItem("password")){
+
+window.location="home.html";
+
+}
+
+else{
+
+alert("Wrong Username or Password");
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
