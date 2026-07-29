@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Donate - Hope For Children Foundation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Hope for Children Foundation | Donate</title>
+    <link rel="stylesheet" href="style.css"></head>
 
 <body>
 
 <header>
-    <h1>Hope For Children Foundation</h1>
-    <p>Giving children a better future</p>
+    <h1>HOPE FOR CHILDREN FOUNDATION</h1>
+    <p>Giving Every Child Hope for a Brighter Future</p>
 </header>
 
 <nav>
@@ -18,40 +17,90 @@
     <a href="homes.html">Homes</a>
     <a href="donate.html">Donate</a>
     <a href="contact.html">Contact</a>
+    <a href="index.html">Sign Out</a>
 </nav>
 
 <section>
-    <h2>Support Our Children</h2>
 
-    <p>
-        Your donation helps provide food, education and
-        shelter for vulnerable children.
-    </p>
-  <img src="images/child3.jpeg" alt="Children Foundation" width="300">
+<h2>Support Our Children</h2>
 
-    <form>
+<img src="images/child3.jpeg" alt="Donate" width="100%" height="350">
 
-        <label>Full Name:</label><br>
-        <input type="text" name="name"><br><br>
+<p>
+Your donation helps provide education, food, healthcare and shelter to
+children in need. Every contribution, whether big or small, makes a
+difference in a child's life.
+</p>
 
-        <label>Email Address:</label><br>
-        <input type="email" name="email"><br><br>
+<h2>Donation Form</h2>
 
-        <label>Donation Amount:</label><br>
-        <input type="number" name="amount"><br><br>
+<form onsubmit="saveDonation(); return false;">
 
-        <label>Message:</label><br>
-        <textarea></textarea><br><br>
+<label>Full Name</label><br>
+<input type="text" id="name" required><br><br>
 
-        <input type="submit" value="Donate">
+<label>Email Address</label><br>
+<input type="email" id="email" required><br><br>
 
-    </form>
+<label>Phone Number</label><br>
+<input type="tel" id="phone" required><br><br>
+
+<label>Amount</label><br>
+<input type="number" id="amount" required><br><br>
+
+<label>Donation Purpose</label><br>
+<select id="purpose">
+    <option>Education</option>
+    <option>Food Support</option>
+    <option>Healthcare</option>
+    <option>General Donation</option>
+</select><br><br>
+
+<label>Message</label><br>
+<textarea id="message" rows="5" cols="40"></textarea><br><br>
+
+<input type="submit" value="Donate">
+
+</form>
 
 </section>
+  <marquee>
+Welcome to Hope for Children Foundation. Together we can change children's lives.
+</marquee>
+  <footer>
 
-<footer>
-    <p>© 2026 Hope For Children Foundation</p>
+<h3>Hope for Children Foundation</h3>
+
+<p>Giving Every Child Hope for a Brighter Future</p>
+
+<p>📍 Kampala, Uganda</p>
+
+<p>📞 +256 700 000000</p>
+
+<p>✉️ hopeforchildren@gmail.com</p>
+
+<hr>
+
+<p>&copy; 2026 Hope for Children Foundation. All Rights Reserved.</p>
+
 </footer>
+
+<script>
+function saveDonation(){
+
+localStorage.setItem("donorName",name.value);
+localStorage.setItem("donorEmail",email.value);
+localStorage.setItem("donorPhone",phone.value);
+localStorage.setItem("donationAmount",amount.value);
+localStorage.setItem("donationPurpose",purpose.value);
+localStorage.setItem("donationMessage",message.value);
+
+alert("Thank you for supporting Hope for Children Foundation!");
+
+window.location="home.html";
+
+}
+</script>
 
 </body>
 </html>
